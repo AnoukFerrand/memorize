@@ -8,6 +8,12 @@ import card4 from "../../assets/images/CartePalmier.png";
 import card5 from "../../assets/images/CartePasteque.png";
 import card6 from "../../assets/images/CarteSoleil.png";
 
+// Test on cards, need to see how I can display them.
+// Need to use State for the flip ? import UseState
+// Need to Create an array of cards object ? with Id, name, status, img emplacement
+// After that, used map to find de card needed
+// And will pass the card find with a prop in the component Card
+
 function Playmat() {
   return (
     <div className="playmat">

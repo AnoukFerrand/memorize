@@ -3,6 +3,9 @@ import "./styles.scss";
 import Playmat from "../Playmat";
 import Footer from "../Footer";
 
+// Add state here, needed to change our card value
+// Cards are buttons ?
+
 function App() {
   return (
     <div className="app">
