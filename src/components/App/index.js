@@ -1,6 +1,5 @@
 import "./styles.scss";
 
-import Navbar from "../Navbar";
 import Playmat from "../Playmat";
 import Footer from "../Footer";
 
@@ -8,7 +7,9 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <Navbar />
+        <div className="titleBar">
+          <h1 className="title">Memorize</h1>
+        </div>
       </header>
       <main className="playmat">
         <Playmat />
