@@ -12,6 +12,9 @@ function App() {
         </div>
       </header>
       <main className="playmat">
+        <button type="button" className="buttonNewGame">
+          New Game
+        </button>
         <Playmat />
       </main>
       <footer>
