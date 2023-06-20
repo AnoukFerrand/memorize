@@ -1,4 +1,5 @@
 import "./styles.scss";
+import { useState } from "react";
 
 import Playmat from "../Playmat";
 import Footer from "../Footer";
@@ -7,6 +8,8 @@ import Footer from "../Footer";
 // Cards are buttons ?
 
 function App() {
+  const [state, setState] = useState(0);
+
   return (
     <div className="app">
       <header className="header">
@@ -19,6 +22,14 @@ function App() {
           New Game
         </button>
         <Playmat />
+        <button
+          type="button"
+          className="buttonMoves"
+          onClick={() => setState(state + 1)}
+        >
+          Moves
+        </button>
+        <p>{state}</p>
       </main>
       <footer>
         <Footer />
