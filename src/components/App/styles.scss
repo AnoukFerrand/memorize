@@ -1,1 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: column;
 
+  .header {
+    background-color: black;
+    padding: 5rem;
+
+    .titleBar {
+      .title {
+        text-align: center;
+        color: white;
+        font-size: xxx-large;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+}
