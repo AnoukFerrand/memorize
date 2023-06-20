@@ -1,12 +1,9 @@
+/* eslint-disable object-curly-newline */
 import "./styles.scss";
 
-import Card from "./Card/index";
+import { useState } from "react";
 
-import card2 from "../../assets/images/CarteCocktail.png";
-import card3 from "../../assets/images/CarteGlace.png";
-import card4 from "../../assets/images/CartePalmier.png";
-import card5 from "../../assets/images/CartePasteque.png";
-import card6 from "../../assets/images/CarteSoleil.png";
+import Card from "./Card/index";
 
 // Test on cards, need to see how I can display them.
 // Need to use State for the flip ? import UseState
@@ -15,25 +12,28 @@ import card6 from "../../assets/images/CarteSoleil.png";
 // And will pass the card find with a prop in the component Card
 
 function Playmat() {
+  // Array of objects with each card twice
+  const [cards, setCards] = useState([
+    { id: 0, name: "boue", status: "", img: "/images/01.png" },
+    { id: 1, name: "boue", status: "", img: "/images/01.png" },
+    { id: 2, name: "cocktail", status: "", img: "/images/02.png" },
+    { id: 3, name: "cocktail", status: "", img: "/images/02.png" },
+    { id: 4, name: "glace", status: "", img: "/images/03.png" },
+    { id: 5, name: "glace", status: "", img: "/images/03.png" },
+    { id: 6, name: "palmier", status: "", img: "/images/04.png" },
+    { id: 7, name: "palmier", status: "", img: "/images/04.png" },
+    { id: 8, name: "pasteque", status: "", img: "/images/05.png" },
+    { id: 9, name: "pasteque", status: "", img: "/images/05.png" },
+    { id: 10, name: "soleil", status: "", img: "/images/06.png" },
+    { id: 11, name: "soleil", status: "", img: "/images/06.png" },
+  ]);
+
   return (
     <div className="playmat">
       <section className="Cards">
-        <Card />
-        <div className="card2">
-          <img alt="card2" src={card2} />
-        </div>
-        <div className="card3">
-          <img alt="card3" src={card3} />
-        </div>
-        <div className="card4">
-          <img alt="card4" src={card4} />
-        </div>
-        <div className="card5">
-          <img alt="card5" src={card5} />
-        </div>
-        <div className="card6">
-          <img alt="card6" src={card6} />
-        </div>
+        {cards.map((card, index) => (
+          <Card key={card.id} card={card} />
+        ))}
       </section>
     </div>
   );
