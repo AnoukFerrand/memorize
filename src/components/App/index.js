@@ -13,24 +13,23 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="titleBar">
-          <h1 className="title">Memorize</h1>
+        <div className="wave">
+          <div className="titleBar">
+            <h1 className="title">Memorize</h1>
+          </div>
         </div>
       </header>
-      <main className="playmat">
+      <main className="main">
         <button type="button" className="buttonNewGame">
           New Game
         </button>
-        <Playmat />
-        <button
-          type="button"
-          className="buttonMoves"
-          onClick={() => setState(state + 1)}
-        >
-          Moves
-        </button>
-        <p>{state}</p>
+        <Playmat className="playmat" />
+        <span className="counterMoves">
+          <p className="moves">Moves</p>
+          <p className="count">{state}</p>
+        </span>
       </main>
+
       <footer>
         <Footer />
       </footer>

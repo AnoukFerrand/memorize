@@ -1,3 +1,13 @@
-img {
-  height: 6em;
+.playmat {
+  width: 35rem;
+  // background-color: rgb(6, 128, 120);
+  display: flex;
+  align-items: center;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+  }
 }

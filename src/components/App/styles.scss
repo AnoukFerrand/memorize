@@ -1,18 +1,118 @@
 .app {
   display: flex;
   flex-direction: column;
+  background-color: black;
 
   .header {
-    background-color: black;
-    padding: 5rem;
+    .wave {
+      height: 20vh;
+      position: relative;
+      background: linear-gradient(
+        90deg,
+        rgba(241, 202, 89, 1) 0%,
+        rgba(242, 180, 106, 1) 19%,
+        rgba(238, 116, 111, 1) 39%,
+        rgba(175, 133, 213, 1) 58%,
+        rgba(137, 185, 212, 1) 78%,
+        rgba(147, 199, 131, 1) 100%
+      );
+    }
 
-    .titleBar {
-      .title {
-        text-align: center;
+    .wave::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: repeat;
+      height: 10px;
+      background-size: 20px 20px;
+      background-image: radial-gradient(
+        circle at 10px -5px,
+        transparent 12px,
+        rgb(0, 0, 0) 13px
+      );
+    }
+
+    .wave::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: repeat;
+      height: 15px;
+      background-size: 40px 20px;
+      background-image: radial-gradient(
+        circle at 10px 15px,
+        rgb(0, 0, 0) 12px,
+        transparent 13px
+      );
+    }
+
+    /* Wave text */
+    .wave {
+      // color: #fff;
+      // text-align: center;
+      // font-weight: bold;
+      // font-size: 24px;
+      // padding-top: 25px;
+      // padding-bottom: 25px;
+      padding: 2rem;
+
+      .titleBar {
+        .title {
+          text-align: center;
+          color: white;
+          font-size: 4.5rem;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: 900;
+        }
+      }
+    }
+    /* */
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .buttonNewGame {
+      margin-top: 3rem;
+      height: 3rem;
+      width: 7rem;
+      border-radius: 5px;
+      border: 3px solid white;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: medium;
+
+      &:hover {
+        background-color: white;
+        color: palevioletred;
+      }
+    }
+
+    .playmat {
+      margin-top: 3rem;
+    }
+
+    .counterMoves {
+      display: flex;
+      margin: 3rem;
+      .moves {
+        margin-right: 2rem;
         color: white;
-        font-size: xxx-large;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 700;
+        font-weight: bold;
+        font-size: xx-large;
+      }
+
+      .count {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
       }
     }
   }

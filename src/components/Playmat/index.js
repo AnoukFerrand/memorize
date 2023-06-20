@@ -30,11 +30,11 @@ function Playmat() {
 
   return (
     <div className="playmat">
-      <section className="Cards">
+      <div className="cards">
         {cards.map((card, index) => (
           <Card key={card.id} card={card} />
         ))}
-      </section>
+      </div>
     </div>
   );
 }
