@@ -16,17 +16,17 @@ function Playmat() {
   const [cards, setCards] = useState(
     [
       { id: 0, name: "boue", status: "", img: "/images/01.png" },
-      { id: 1, name: "boue", status: "", img: "/images/01.png" },
-      { id: 2, name: "cocktail", status: "", img: "/images/02.png" },
-      { id: 3, name: "cocktail", status: "", img: "/images/02.png" },
-      { id: 4, name: "glace", status: "", img: "/images/03.png" },
-      { id: 5, name: "glace", status: "", img: "/images/03.png" },
-      { id: 6, name: "palmier", status: "", img: "/images/04.png" },
-      { id: 7, name: "palmier", status: "", img: "/images/04.png" },
-      { id: 8, name: "pasteque", status: "", img: "/images/05.png" },
-      { id: 9, name: "pasteque", status: "", img: "/images/05.png" },
-      { id: 10, name: "soleil", status: "", img: "/images/06.png" },
-      { id: 11, name: "soleil", status: "", img: "/images/06.png" },
+      { id: 0, name: "boue", status: "", img: "/images/01.png" },
+      { id: 1, name: "cocktail", status: "", img: "/images/02.png" },
+      { id: 1, name: "cocktail", status: "", img: "/images/02.png" },
+      { id: 2, name: "glace", status: "", img: "/images/03.png" },
+      { id: 2, name: "glace", status: "", img: "/images/03.png" },
+      { id: 3, name: "palmier", status: "", img: "/images/04.png" },
+      { id: 3, name: "palmier", status: "", img: "/images/04.png" },
+      { id: 4, name: "pasteque", status: "", img: "/images/05.png" },
+      { id: 4, name: "pasteque", status: "", img: "/images/05.png" },
+      { id: 5, name: "soleil", status: "", img: "/images/06.png" },
+      { id: 5, name: "soleil", status: "", img: "/images/06.png" },
     ].sort(() => Math.random() - 0.5)
   );
 
@@ -34,7 +34,7 @@ function Playmat() {
     <div className="playmat">
       <div className="cards">
         {cards.map((card, index) => (
-          <Card key={card.id} card={card} />
+          <Card key={index} card={card} index={index} />
         ))}
       </div>
     </div>
