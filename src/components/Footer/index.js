@@ -3,7 +3,7 @@ import "./styles.scss";
 function Footer() {
   return (
     <div className="footer">
-      <p>footer Here</p>
+      <p className="signed">Coded and designed by Anouk Ferrand</p>
     </div>
   );
 }
