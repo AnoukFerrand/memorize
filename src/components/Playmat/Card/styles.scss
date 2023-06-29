@@ -2,5 +2,23 @@
   img {
     height: 10rem;
     border-radius: 1rem;
+
+    //For flipping cards :
+    opacity: 0;
+    animation: 2s hideImage linear;
+  }
+
+  &.active {
+    transform: rotateY(0);
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  .unmatch {
+    background-color: rgb(240, 28, 28);
+    border-radius: 5px;
+    animation: 2s hideCard linear;
   }
 }
