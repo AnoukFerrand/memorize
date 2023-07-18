@@ -8,17 +8,20 @@ import PropTypes from "prop-types";
 
 function Card({ card, index, clickHandler }) {
   return (
-    // <div className="cardsFrontBack">
-    <div className={`card ${card.status}`} onClick={() => clickHandler(index)}>
-      <img src={card.img} alt={card.name} />
+    <div className="cardsFlip">
+      <div
+        className={`card ${card.status}`}
+        onClick={() => clickHandler(index)}
+      >
+        <img src={card.img} alt={card.name} />
+      </div>
+
+      {/* // ADD A BACK IMAGE : */}
+      {/* 
+      <div className={`card ${card.status}`}>
+        <img src="/images/00.png" alt="backCard" className="frontImage" />
+      </div> */}
     </div>
-
-    // ADD A BACK IMAGE :
-
-    // <div className={`card ${card.status}`}>
-    // <img src="/images/00.png" alt="backCard" className="frontImage" />
-    // </div>
-    // </div>
   );
 }
 
