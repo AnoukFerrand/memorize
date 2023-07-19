@@ -1,74 +1,88 @@
-.cardsFlip {
-  // animation: 5s hideImage linear;
+// .cardsFlip {
+// animation: 5s hideImage linear;
 
-  .card {
-    // border: solid white;
-    // border-radius: 1rem;
-    animation: 2.5s hideCard linear;
+.card {
+  // border: 0.5px solid white;
+  border-radius: 1rem;
+  // animation: 2.5s hideCard linear;
+
+  img {
+    height: 10rem;
+    border-radius: 1rem;
+
+    opacity: 0;
+    animation: 2.5s hideImage linear;
+
+    // test working :
+    // visibility: hidden;
+    // opacity: 0;
+    // transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+
+    //For flipping cards :
+    // opacity: 0;
+    // transform: rotateY(180deg);
+    // transform-style: preserve-3d;
+    // transition: transform 0.3s ease;
+  }
+
+  &.active {
+    // transform: rotateY(180deg);
+
+    // test flip card when active, working :
+    // transform: rotateY(180deg);
+    // transform-style: preserve-3d;
+    // transition: transform 0.35s ease;
 
     img {
-      height: 10rem;
-      border-radius: 1rem;
-
-      opacity: 0;
-      animation: 2s hideImage linear;
-
-      // test working :
-      // visibility: hidden;
-      // opacity: 0;
-      // transition: visibility 0s linear 0.3s, opacity 0.3s linear;
-
-      //For flipping cards :
-      // opacity: 0;
-      // transform: rotateY(180deg);
-      // transform-style: preserve-3d;
-      // transition: transform 0.3s ease;
-    }
-
-    &.active {
-      // transform: rotateY(180deg);
-
-      // test working :
-      transform: rotateY(180deg);
+      transform: rotateY(360deg);
       transform-style: preserve-3d;
       transition: transform 0.35s ease;
-
-      img {
-        opacity: 1;
-      }
-    }
-
-    .unmatch {
-      background-color: rgb(240, 28, 28);
-      border-radius: 5px;
-      animation: 2s hideCard linear;
-      img {
-        opacity: 1;
-      }
-    }
-  }
-
-  @keyframes hideCard {
-    0%,
-    70% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(180deg);
-      transform-style: preserve-3d;
-      transition: transform 0.35s ease;
-    }
-  }
-
-  @keyframes hideImage {
-    0%,
-    84% {
       opacity: 1;
     }
-    85% {
-      opacity: 0;
-    }
+  }
+  &.cardsBack {
+    opacity: 1;
+    animation: 2.5s showBack linear;
+  }
+  // .unmatch {
+  //   // background-color: rgb(240, 28, 28);
+  //   // border-radius: 5px;
+  //   transform: rotateY(180deg);
+  //   transform-style: preserve-3d;
+  //   transition: transform 0.35s ease;
+  //   opacity: 1;
+  //   img {
+  //     // animation: 3s hideCard linear;
+  //   }
+  // }
+}
+
+// TRY TO MAKE WHITE BACK APPEAR
+@keyframes showBack {
+  0% {
+    opacity: 0;
+    background-color: black;
+  }
+  70% {
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(180deg);
+    background-color: white;
   }
 }
+
+@keyframes hideImage {
+  0%,
+  60% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  85% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+// }
 
 // ADD IF TO HAVE THE BACKGROUNd IMAGE BLACK AND WHITE ???
