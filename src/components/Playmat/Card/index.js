@@ -12,8 +12,9 @@ function Card({ card, index, clickHandler }) {
       <div className="cardsFront">
         <div
           // ADD A TERNAIRE TO CHANGE CARDS BACK
-          //NOT ENOUGH, "UNMATCH" "MATCH" CLASSNAME DOESN'T APPEAR ANYMORE
-          className={`card ${card.status ? "active" : "cardsBack"}`}
+          // NOT ENOUGH, "UNMATCH" "MATCH" CLASSNAME DOESN'T APPEAR ANYMORE
+          // card.status ? "active" : "cardsBack"
+          className={`card ${card.status}`}
           onClick={() => clickHandler(index)}
         >
           <img src={card.img} alt={card.name} />
