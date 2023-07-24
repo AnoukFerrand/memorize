@@ -1,39 +1,16 @@
-// .cardsFlip {
-// animation: 5s hideImage linear;
-
 .card {
   border-radius: 1rem;
-  // animation: 2.5s hideCard linear;
   border: 3px solid white;
   height: 10rem;
   overflow: hidden;
 
   img {
     height: 100%;
-    // border-radius: 1rem;
     opacity: 0;
     animation: 2.5s hideImage linear;
-
-    // test working :
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: visibility 0s linear 0.3s, opacity 0.3s linear;
-
-    //For flipping cards :
-    // opacity: 0;
-    // transform: rotateY(180deg);
-    // transform-style: preserve-3d;
-    // transition: transform 0.3s ease;
   }
 
   &.active {
-    // transform: rotateY(180deg);
-
-    // test flip card when active, working :
-    // transform: rotateY(180deg);
-    // transform-style: preserve-3d;
-    // transition: transform 0.35s ease;
-
     img {
       transform: rotateY(360deg);
       transform-style: preserve-3d;
@@ -41,37 +18,7 @@
       opacity: 1;
     }
   }
-  // &.cardsBack {
-  //   opacity: 1;
-  //   animation: 2.5s showBack linear;
-  // }
-  // .unmatch {
-  //   // background-color: rgb(240, 28, 28);
-  //   // border-radius: 5px;
-  //   transform: rotateY(180deg);
-  //   transform-style: preserve-3d;
-  //   transition: transform 0.35s ease;
-  //   opacity: 1;
-  //   img {
-  //     // animation: 3s hideCard linear;
-  //   }
-  // }
 }
-
-// TRY TO MAKE WHITE BACK APPEAR
-// @keyframes showBack {
-//   0% {
-//     opacity: 0;
-//     background-color: black;
-//   }
-//   70% {
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: rotateY(180deg);
-//     background-color: white;
-//   }
-// }
 
 @keyframes hideImage {
   0%,
