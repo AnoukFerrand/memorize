@@ -5,7 +5,8 @@ import { useState, useRef } from "react";
 import "./styles.scss";
 import Card from "./Card/index";
 
-function Playmat() {
+// PropTypes needed cause of the use of es-lint, but not necessary in this project
+function Playmat({ increaseCounter }) {
   // Array of objects with each card twice
   const [cards, setCards] = useState(
     [
@@ -72,7 +73,7 @@ function Playmat() {
 
   return (
     <div className="playmat">
-      <div className="cards">
+      <div className="cards" onClick={() => increaseCounter()}>
         {cards.map((card, index) => (
           <Card
             key={index}

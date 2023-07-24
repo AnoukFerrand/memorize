@@ -8,8 +8,12 @@ import Footer from "../Footer";
 // Cards are buttons ?
 
 function App() {
-  const [state, setState] = useState(0);
+  const [counter, setCounter] = useState(0);
   const refreshGame = () => window.location.reload(true);
+
+  const increaseCounter = () => {
+    setCounter((count) => count + 1);
+  };
 
   return (
     <div className="app">
@@ -24,10 +28,14 @@ function App() {
         <button type="button" className="buttonNewGame" onClick={refreshGame}>
           New Game
         </button>
-        <Playmat className="playmat" />
+        <Playmat
+          className="playmat"
+          counter="counter"
+          increaseCounter={increaseCounter}
+        />
         <span className="counterMoves">
           <p className="moves">Moves</p>
-          <p className="count">{state}</p>
+          <p className="count">{counter}</p>
         </span>
       </main>
 
