@@ -9,6 +9,7 @@ import Footer from "../Footer";
 
 function App() {
   const [state, setState] = useState(0);
+  const refreshGame = () => window.location.reload(true);
 
   return (
     <div className="app">
@@ -20,7 +21,7 @@ function App() {
         </div>
       </header>
       <main className="main">
-        <button type="button" className="buttonNewGame">
+        <button type="button" className="buttonNewGame" onClick={refreshGame}>
           New Game
         </button>
         <Playmat className="playmat" />
