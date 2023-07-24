@@ -11,7 +11,7 @@
   img {
     height: 100%;
     opacity: 0;
-    animation: 2.5s hideImage linear;
+    animation: 1.5s hideImage linear;
   }
 
   &.active {
@@ -19,7 +19,7 @@
     img {
       transform: rotateY(360deg);
       transform-style: preserve-3d;
-      transition: transform 0.35s ease;
+      transition: transform 0.2s ease-out;
       opacity: 1;
     }
   }
