@@ -1,0 +1,38 @@
+.card {
+  border-radius: 1rem;
+  border: 3px solid rgb(78, 77, 77);
+  height: 10rem;
+  overflow: hidden;
+
+  &:hover {
+    border: 3px solid white;
+  }
+
+  img {
+    height: 100%;
+    opacity: 0;
+    animation: 1.5s hideImage linear;
+  }
+
+  &.active {
+    border: 3px solid white;
+    img {
+      transform: rotateY(360deg);
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes hideImage {
+  0%,
+  60% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  85% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}

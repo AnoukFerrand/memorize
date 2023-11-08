@@ -1,0 +1,21 @@
+.footer {
+  padding: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(241, 202, 89, 1) 0%,
+    rgba(242, 180, 106, 1) 19%,
+    rgba(238, 116, 111, 1) 39%,
+    rgba(175, 133, 213, 1) 58%,
+    rgba(137, 185, 212, 1) 78%,
+    rgba(147, 199, 131, 1) 100%
+  );
+
+  .signed {
+    color: white;
+    text-align: center;
+
+    &:hover {
+      color: black;
+    }
+  }
+}

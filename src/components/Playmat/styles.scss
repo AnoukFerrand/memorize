@@ -1,0 +1,12 @@
+.playmat {
+  width: 35rem;
+  display: flex;
+  align-items: center;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
