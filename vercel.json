@@ -3,7 +3,7 @@
         {
           "src": "/",
           "headers": { "cache-control": "s-maxage=1000" },
-          "dest": "/src/index.js"
+          "dest": "/src/components/App/index.js"
         }
       ]
 }
